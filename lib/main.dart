@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ur_smart_note_taker/features/gen_ui/gen_ui_screen.dart';
 
 void main() {
   runApp(
@@ -20,27 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('UR Smart Note Taker'),
-      ),
-      body: const Center(
-        child: Text(
-          'Welcome to UR Smart Note Taker!',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+      home: const GenUiScreen(),
     );
   }
 }
